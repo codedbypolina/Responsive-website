@@ -1,0 +1,598 @@
+// Importing variables and mixins
+@import "variables";
+@import "mixins";
+
+////////// GLOBAL STYLING
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+///// background styling
+// ellipse #1
+#ellipse_1 {
+  position: absolute;
+  left: -26.52%;
+  right: 58.66%;
+  top: -1.74%;
+  bottom: 50.54%;
+
+  background: $mainFontColor;
+  filter: blur(100px);
+}
+
+// ellipse #2
+#ellipse_2 {
+  position: absolute;
+  left: 40%;
+  right: 0%;
+  top: 120.1%;
+  bottom: -200%;
+
+  background: $mainFontColor;
+  filter: blur(1000px);
+}
+
+// ellipse #3
+#ellipse_3 {
+  position: absolute;
+  left: -24.8%;
+  right: 56.94%;
+  top: 300%;
+  bottom: -290.12%;
+
+  background: $mainFontColor;
+  filter: blur(200px);
+}
+// ellipse #4
+#ellipse_4 {
+  position: absolute;
+  left: 50.8%;
+  right: 0.94%;
+  top: 350%;
+  bottom: -400.12%;
+
+  background: $mainFontColor;
+  filter: blur(200px);
+}
+
+// making all titles uppercase
+h1,
+h2,
+h3,
+#main_p,
+.description,
+#credits {
+  text-transform: uppercase;
+}
+
+// main colors of the page using variables
+.title,
+#credits {
+  color: $accentFontColor;
+}
+
+.card_title,
+.highlight,
+#main_credit,
+#main_credit {
+  color: $mainFontColor;
+}
+
+// styling header and cards with mixins
+.card,
+.main_header,
+#card_eight,
+#card_seven {
+  @include card;
+}
+
+// Styling credit at the end of the webpage
+#credits {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+////////////// BIG SCREEN GRID SET UP (901px and up)
+.grid {
+  display: grid;
+  height: 100%;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 50px;
+}
+
+// styling header
+.main_header {
+  grid-column: 1 / span 4;
+  justify-self: center;
+  align-items: center;
+  display: grid;
+  position: relative;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  margin-left: 23%;
+  margin-right: 23%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 15px;
+}
+
+#logo {
+  width: 200px;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+  justify-self: center;
+}
+
+#main_title {
+  font-size: $mainTitleFontSize;
+  font-weight: 400;
+}
+
+#main_title,
+#main_credit,
+#p_header {
+  grid-column: 2 / span 1;
+  margin: 0px;
+  margin-left: 5px;
+}
+
+///// 2018 YEAR
+
+// Styling Header for 2018 year
+
+.year_header {
+  grid-column: 2 / span 2;
+  display: grid;
+  position: relative;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  margin: 0px;
+  height: 100%;
+  width: auto;
+}
+
+h2.title,
+p.description {
+  height: fit-content;
+}
+
+.year {
+  font-size: $mainTitleFontSize - 5;
+  grid-row: 1 / span 2;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 25%;
+}
+
+.title {
+  font-size: $yearTitleFontSize;
+  margin: 0;
+  height: 30px;
+  align-self: flex-end;
+}
+
+.description {
+  height: 50px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+// STYLING FIRST CARD
+
+.card_one {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.img_card {
+  width: 360px;
+  border-radius: 30px 30px 0px 0px;
+  margin: -30px;
+}
+
+.card {
+  width: 300px;
+  padding: 30px;
+  margin: 0px;
+}
+
+.date {
+  margin-top: 50px;
+}
+
+// SECOND CARD
+
+.card_two {
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 2;
+  @include position;
+  justify-content: start;
+}
+
+// THIRD CARD
+
+.card_three {
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 2;
+  @include position;
+  justify-content: end;
+}
+
+// FOURTH CARD
+
+.card_four {
+  grid-row: 5 / span 1;
+  grid-column: 3 / span 2;
+  @include position;
+  justify-content: start;
+}
+
+// FIFTH CARD
+
+.card_five {
+  grid-row: 7 / span 1;
+  grid-column: 1 / span 2;
+  @include position;
+  justify-content: end;
+}
+
+// SIXTH CARD
+
+.card_six {
+  grid-row: 7 / span 1;
+  grid-column: 3 / span 2;
+  @include position;
+  justify-content: start;
+}
+
+// SEVENTH CARD
+
+.card_seven {
+  grid-row: 9 / span 1;
+  grid-column: 2 / span 2;
+  width: 100%;
+  @include position;
+  justify-content: center;
+}
+
+#card_seven {
+  height: 342.22px;
+  display: grid;
+  position: relative;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.text {
+  width: 500px;
+  padding: 30px;
+  margin: 0px;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding-top: 0;
+}
+
+#big_img {
+  width: 351px;
+  border-radius: 30px 0px 0px 30px;
+  margin: 0px;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+// EIGHT CARD
+
+.card_eight {
+  grid-row: 11 / span 1;
+  grid-column: 2 / span 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#card_eight {
+  height: 342.22px;
+  display: grid;
+  position: relative;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.text {
+  width: 500px;
+  padding: 30px;
+  margin: 0px;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding-top: 0;
+}
+
+#big_img {
+  width: 351px;
+  border-radius: 30px 0px 0px 30px;
+  margin: 0px;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+#credits {
+  grid-row: 12 / span 1;
+  grid-column: 2 / span 2;
+  display: flex;
+  justify-content: center;
+}
+
+////////////// MEDIA SET UP FOR VERY BIG SCREEN (1610px and up)
+
+@media screen and (min-width: 1610px) {
+  .main_header {
+    width: 830.766px;
+  }
+  .year_header {
+    width: 775px;
+    grid-column: 2 / span 2;
+    justify-self: center;
+  }
+}
+
+////////////// MEDIA SET UP FOR ADDITIONAL SCREEN SIZE (1340px and below)
+
+@media screen and (max-width: 1340px) {
+  .main_header {
+    width: 60%;
+  }
+  .year_header {
+    width: 60%;
+    grid-column: 1 / span 4;
+    justify-self: center;
+  }
+}
+
+////////////// MEDIUM SCREEN STYLING (900px and below)
+
+@media screen and (max-width: 900px) {
+  // Styling background by adding ellipse #5
+  #ellipse_5 {
+    position: absolute;
+    left: -10%;
+    right: 35%;
+    top: 730%;
+    bottom: -750.12%;
+
+    background: $mainFontColor;
+    filter: blur(170px);
+  }
+
+  #ellipse_4 {
+    position: absolute;
+    left: 40%;
+    right: 0%;
+    top: 500%;
+    bottom: -580.12%;
+
+    background: $mainFontColor;
+    filter: blur(170px);
+  }
+
+  #ellipse_2 {
+    filter: blur(250px);
+  }
+
+  // Grid
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0px;
+  }
+
+  // Styling main header
+  .main_header {
+    width: 80%;
+  }
+
+  // Styling each chapter
+  .year_header {
+    grid-column: 1 / span 4;
+    width: 80%;
+    justify-self: center;
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  // Styling all cards
+
+  .cards,
+  .card_seven,
+  .card_eight {
+    display: flex;
+    justify-content: center;
+    @include one_grid_column;
+  }
+
+  .card_one {
+    grid-row: 3 / span 1;
+  }
+  .card_two {
+    grid-row: 4 / span 1;
+  }
+  .card_three {
+    grid-row: 6 / span 1;
+  }
+  .card_four {
+    grid-row: 7 / span 1;
+  }
+  .card_five {
+    grid-row: 9 / span 1;
+  }
+  .card_six {
+    grid-row: 10 / span 1;
+  }
+
+  .card_seven {
+    grid-row: 12 / span 1;
+  }
+
+  .card_eight {
+    grid-row: 14 / span 1;
+  }
+
+  #credits {
+    grid-row: 15 / span 1;
+    grid-column: 2 / span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  //changing image and text position for the last two cards
+
+  #card_seven,
+  #card_eight {
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    margin: 0px;
+  }
+
+  #big_img {
+    width: 360px;
+    border-radius: 30px 30px 0px 0px;
+    margin: -30px;
+  }
+
+  .text {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    width: 300px;
+    padding: 0px;
+  }
+}
+
+////////////// SMALLER MEDIUM SCREEN STYLING (700px and below)
+
+@media screen and (max-width: 700px) {
+  //Restyling background
+  #ellipse_5 {
+    bottom: -720.12%;
+  }
+
+  // Styling main header
+
+  .main_header {
+    width: 90%;
+  }
+
+  #logo {
+    width: 160px;
+  }
+  #main_title {
+    font-size: $mainTitleFontSize - 10;
+  }
+  #main_credit {
+    font-size: $pFontSize + 5;
+  }
+  #p_header {
+    padding-top: 10px;
+    font-size: $pFontSize;
+  }
+  .title {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+////////////// SMALL SCREEN STYLING (500px and below)
+
+@media screen and (max-width: 500px) {
+  // Restyling background
+  #ellipse_5 {
+    bottom: -700.12%;
+  }
+  #ellipse_4 {
+    position: absolute;
+    left: -24.8%;
+    right: 56.94%;
+    top: 630%;
+    bottom: -650.12%;
+
+    background: $mainFontColor;
+    filter: blur(100px);
+  }
+  #ellipse_3 {
+    position: absolute;
+    left: -0.8%;
+    right: 0%;
+    top: 300%;
+    bottom: -450.12%;
+
+    background: $mainFontColor;
+    filter: blur(200px);
+  }
+
+  #ellipse_1 {
+    position: absolute;
+    left: -26.52%;
+    right: 58.66%;
+    top: -1.74%;
+    bottom: 30.54%;
+
+    background: $mainFontColor;
+    filter: blur(100px);
+  }
+
+  // Grid change
+  .grid {
+    grid-row-gap: 15px;
+  }
+
+  // Changing main header's styling
+
+  .main_header {
+    width: 90%;
+    margin-bottom: 0px;
+  }
+
+  #logo {
+    width: 120px;
+    margin-right: 15px;
+  }
+
+  #main_title {
+    font-size: $mainTitleFontSize - 25;
+  }
+  #main_credit {
+    font-size: $pFontSize;
+  }
+  #main_p {
+    padding-top: 10px;
+    font-size: $pFontSize - 2;
+    margin-top: 0px;
+  }
+
+  // Changing chapter description styling
+
+  .year_header {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .title {
+    height: 100%;
+    font-size: $yearTitleFontSize - 5px;
+  }
+
+  .year {
+    font-size: $mainTitleFontSize - 15px;
+  }
+
+  .description {
+    height: 100%;
+    font-size: $pFontSize - 3;
+  }
+}
