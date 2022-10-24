@@ -513,6 +513,8 @@ p.description {
   // Restyling background
   #ellipse_5 {
     bottom: -700.12%;
+    background: $mainFontColor;
+    filter: blur(80px);
   }
   #ellipse_4 {
     position: absolute;
@@ -522,7 +524,7 @@ p.description {
     bottom: -650.12%;
 
     background: $mainFontColor;
-    filter: blur(100px);
+    filter: blur(80px);
   }
   #ellipse_3 {
     position: absolute;
@@ -532,7 +534,7 @@ p.description {
     bottom: -450.12%;
 
     background: $mainFontColor;
-    filter: blur(200px);
+    filter: blur(100px);
   }
 
   #ellipse_1 {
@@ -543,7 +545,7 @@ p.description {
     bottom: 30.54%;
 
     background: $mainFontColor;
-    filter: blur(100px);
+    filter: blur(80px);
   }
 
   // Grid change
