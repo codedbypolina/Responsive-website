@@ -365,6 +365,7 @@ p.description {
     grid-row: 2 / span 1;
     width: 300px;
     padding: 0px; } }
+
 @media screen and (max-width: 700px) {
   #ellipse_5 {
     bottom: -720.12%; }
@@ -389,8 +390,11 @@ p.description {
     height: 100%;
     display: flex;
     align-items: flex-end; } }
+
 @media screen and (max-width: 500px) {
   #ellipse_5 {
+    -webkit-appearance: none;
+    background: #f8c343;
     bottom: -700.12%; }
 
   #ellipse_4 {
