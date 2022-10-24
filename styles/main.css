@@ -365,10 +365,9 @@ p.description {
     grid-row: 2 / span 1;
     width: 300px;
     padding: 0px; } }
-
 @media screen and (max-width: 700px) {
   #ellipse_5 {
-    bottom: -320.12%; }
+    bottom: -720.12%; }
 
   .main_header {
     width: 90%; }
@@ -390,21 +389,9 @@ p.description {
     height: 100%;
     display: flex;
     align-items: flex-end; } }
-
 @media screen and (max-width: 500px) {
   #ellipse_5 {
-    -webkit-appearance: none;
-    background: #f8c343;
     bottom: -700.12%; }
-
-  #ellipse_6 {
-    position: absolute;
-    left: -24.8%;
-    right: -0.94%;
-    top: 630%;
-    bottom: -860.12%;
-    background: #f8c343;
-    filter: blur(80px); }
 
   #ellipse_4 {
     position: absolute;
@@ -431,7 +418,7 @@ p.description {
     top: -1.74%;
     bottom: 30.54%;
     background: #f8c343;
-    filter: blur(50px); }
+    filter: blur(100px); }
 
   .grid {
     grid-row-gap: 15px; }
